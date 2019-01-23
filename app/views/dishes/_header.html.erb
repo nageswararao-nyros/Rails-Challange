@@ -7,15 +7,16 @@
             <div class=" location_dropdown dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
               SELECT LOCATION
             </div>
-            <div class="dropdown-menu">
-              <%= form_tag(search_path , method: :get, enforce_utf8: false) do %>
-                <%= text_field_tag :name, nil, class: "form-control dropdown_input_style", :placeholder => 'location' %>
-                <span>
-                  <%= button_tag( :name=>nil  ) do %>
-                    <%= image_tag('search_icon.png', class: "search_btn") %>
+            <div class="dropdown-menu location_search_dropdown">
+              <div>
+                <%= form_tag(search_path , method: :get, enforce_utf8: false) do %>
+                <%= text_field_tag :name, nil, class: "dropdown_input_style", :placeholder => 'location' %>
+                
+                  <%= button_tag( :name=>nil , class: "location_search_btn" ) do %>
+                    <%= image_tag('search_icon.png') %>
                   <% end %>
-                </span>
               <% end %>
+              </div>
             </div>
           </li>
           <div class="nav_right">

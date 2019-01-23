@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_17_062944) do
+ActiveRecord::Schema.define(version: 2019_01_22_123131) do
 
   create_table "dishes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(version: 2019_01_17_062944) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "location"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "ratings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "dish_id"
     t.text "comment"
@@ -43,14 +51,12 @@ ActiveRecord::Schema.define(version: 2019_01_17_062944) do
 
   create_table "restaurants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.text "address"
+    t.integer "location_id"
     t.string "seatings"
     t.string "string"
     t.text "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "lattitude"
-    t.float "longitude"
   end
 
   create_table "taggings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

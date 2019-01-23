@@ -10,9 +10,9 @@
             <h1 class="dish_name"><%= dish.name%></h1>
              <%= dish.restaurants.find_each do |restaurant| %>
             <h4 class="restaurent_name">
-              <%= link_to restaurant.name, restaurant_path(restaurant), class:"link_style" %>
+              <%= link_to restaurant.name, restaurant_path(restaurant), class: "link_style" %>
             </h4>
-            <p class="price_style">&#8377;<%= dish.price %></p>
+            <p class="price_style"><i class="fa fa-inr"></i><%= dish.price %></p>
             <p class="rating_sym_style">
               <%= image_tag('heart.png')%>  &nbsp<span><%= dish.rating %></span><br>
               <span class="vote_count">1 vote</span>
@@ -20,7 +20,7 @@
 
             <div class="dish_location">
               <div>
-                <p><span class="dish_location_style"><%= image_tag('location.png',:class=>"location_image")%></span> <%= restaurant.address %></p>
+                <p><span class="dish_location_style"><%= fa_icon "map-marker" %></span><%= restaurant.location.location %></p>
               </div>
             </div>
           <% end %>

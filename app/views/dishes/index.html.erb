@@ -1,5 +1,5 @@
 <div class="search_background">
-  <%= image_tag(('back.png'),:class=>"search_block")%>
+  <%= image_tag(('back.png'),:class=>"img-fluid search_block")%>
 </div>
 <div>
   <div class="search_text_block">
@@ -31,7 +31,7 @@
                  <%= dish.restaurants.find_each do |restaurant| %>
 
                 <h4 class="restaurent_name">
-                  <%= link_to restaurant.name, restaurant_path(restaurant), class:"link_style" %>   
+                  <%= link_to restaurant.name, restaurant_path(restaurant), class: "link_style" %>   
                 </h4>
 
                 <p class="price_style">&#8377;<%= dish.price %></p>
@@ -44,7 +44,7 @@
 
                 <div class="dish_location">
                   <div>
-                    <p><span class="dish_location_style"><%= image_tag('location.png',:class=>"location_image")%></span> <%= restaurant.address %></p>
+                    <p><span class="dish_location_style"><%= fa_icon "map-marker" %></span><%= restaurant.location.location %></p>
                   </div>
                 </div>
               <% end %>

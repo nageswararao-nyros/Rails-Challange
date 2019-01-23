@@ -16,8 +16,9 @@
 // = require activestorage
 // = require turbolinks
 //= require bootstrap-sprockets
-// = require_tree .
 //= require jquery.multi-select.js
 //= require jquery-ui
 //= require jquery-ui/effect.all
+//= require gmaps/google
+// = require_tree .
 
