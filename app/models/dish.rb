@@ -8,4 +8,5 @@ class Dish < ApplicationRecord
         processors: [:thumbnail]}, default_url: "/images/:style/missing.png" 
   validates_attachment :image, :content_type => {:content_type => %w(image/jpeg image/jpg image/png application/pdf application/msword application/vnd.openxmlformats-officedocument.wordprocessingml.document)},
   attachment_size: { less_than: 5.megabytes }
+  validates :name, :price, :rating, :tagging_id, presence: true
 end

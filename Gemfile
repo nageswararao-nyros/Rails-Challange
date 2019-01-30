@@ -26,7 +26,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'bootsnap', '>= 1.1.0', require: false
+
+gem 'bootsnap', '~> 1.3', '>= 1.3.2'
 
 gem 'bootstrap', '~> 4.0'
 
@@ -62,6 +63,8 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 
 gem 'gmaps-rails', '~> 0.0.2'
 
+gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4'
+
 
 #gem 'sidekiq', '~> 5.2', '>= 5.2.3'
 
@@ -74,9 +77,11 @@ gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.3'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
+  gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
+  gem 'faker', '~> 1.9', '>= 1.9.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -91,6 +96,8 @@ group :development do
 end
 
 group :test do
+  gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
+  gem 'faker', '~> 1.9', '>= 1.9.1'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'

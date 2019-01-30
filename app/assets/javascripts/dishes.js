@@ -86,7 +86,7 @@ $(document).ready(function(){
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map_block_div'),{
       center: {lat: 20.5937, lng: 78.9629} ,
-      zoom: 6,
+      zoom: 5,
       });
 
   var location = gon.locations
