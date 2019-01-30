@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Tagging, :type => :model do
+RSpec.describe Dish, :type => :model do
   context "Tagging Queries" do
 
     let(:dish){build(:dish)}
