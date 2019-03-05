@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.4.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -82,6 +82,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
   gem 'faker', '~> 1.9', '>= 1.9.1'
+  gem 'rspec_junit_formatter', '~> 0.4.1'
+  gem 'rspec-legacy_formatters'
+  gem 'parallel_tests', '~> 2.28'
+  # gem 'rspec-core', '~> 3.8'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -98,9 +102,12 @@ end
 group :test do
   gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
   gem 'faker', '~> 1.9', '>= 1.9.1'
+  # gem 'rspec-legacy_formatters'
+  # gem 'rspec-core', '~> 3.8'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'rspec_junit_formatter', '~> 0.4.1'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end

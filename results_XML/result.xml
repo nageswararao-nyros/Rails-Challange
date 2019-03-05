@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite>
+    <testcase name="DishesController Getting all Dish Records" time="0.053986791" filepath="./spec/controllers/dishes_controller_spec.rb" assertion="">
+    </testcase>
+    <testcase name="DishesController Getting all searched items" time="0.055914347" filepath="./spec/controllers/dishes_controller_spec.rb" assertion="">
+    </testcase>
+    <testcase name="DishesController Normal filter" time="0.032058592" filepath="./spec/controllers/dishes_controller_spec.rb" assertion="">
+    </testcase>
+    <testcase name="DishesController Rating filter " time="0.012678989" filepath="./spec/controllers/dishes_controller_spec.rb" assertion="">
+    </testcase>
+    <testcase name="DishesController Tagging filter " time="0.030755414" filepath="./spec/controllers/dishes_controller_spec.rb" assertion="">
+    </testcase>
+    <testcase name="DishesController Range slider filter " time="0.019608708" filepath="./spec/controllers/dishes_controller_spec.rb" assertion="">
+    </testcase>
+  </testsuite>
+</testsuites>

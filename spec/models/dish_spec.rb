@@ -1,11 +1,12 @@
 require "rails_helper"
 
-RSpec.describe Tagging, :type => :model do
+RSpec.describe Dish, :type => :model do
   context "Tagging Queries" do
 
     let(:dish){build(:dish)}
 
     it 'Creating the Dish with out name' do
+      # assertion 2
       dish.name = nil
       expect(dish.save).to eq(false)
     end
